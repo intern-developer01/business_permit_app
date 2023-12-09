@@ -16,7 +16,7 @@ function ValidatePhone(p) {
 }
 
 $(document).ready(function() {
-    
+
     $(".business_fields").keyup(function() {
         var $nonempty = $('.business_fields').filter(function() {
             return this.value == ''
