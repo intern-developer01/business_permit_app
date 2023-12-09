@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bpa_db',
         'USER': 'root',
-        'PASSWORD': 'Tatadota10',
+        'PASSWORD': 'yjh434ctuG@-@',
         'PORT': 3306,
         'HOST': '127.0.0.1',
         'CONN_MAX_AGE': 0

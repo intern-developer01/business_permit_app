@@ -16,7 +16,11 @@ import string
 from django.contrib.auth.hashers import check_password
 
 
-def BusinessPermitApplication(request):
-  
-    context = {}
-    return render(request, 'business_permit_application.html', context)
+class BusinessPermitApplication(View):
+
+    def get(self,request):
+        context = {}
+        return render(request, 'business_permit_application.html', context)
+    
+    def post(self,request):
+        return HttpResponseRedirect("/#success_set")
