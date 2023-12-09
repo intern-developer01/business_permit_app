@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Welcome to Cebu Tax Tracker, your trusted partner in navigating the complexities of taxation in the vibrant city of Cebu. We specialize in providing comprehensive tax tracking and compliance solutions for businesses and individuals alike. Stay informed with the latest updates on Cebu business taxes, income tax regulations, and financial management strategies. Our dedicated team is committed to ensuring your fiscal responsibility while offering expert advice and cutting-edge tools for effective tax management. Explore a seamless experience in tracking, reporting, and optimizing your financial landscape with Cebu Tax Tracker. Simplify your tax journey, thrive financially.">
-      <meta name="keywords" content="Cebu taxes, Tax tracking, Taxation in Cebu, Tax compliance, Financial tracking, Tax reporting, Cebu business taxes, Tax management, Accounting services, Tax updates, Philippine taxation, Income tax tracking, Business finance, Tax deadlines, Revenue tracking, Tax software, Finance management, Tax consulting, Tax advisory, Fiscal responsibility">
+        <meta name="description" content="Welcome to Cebu Tax Tracker, your trusted partner in navigating the complexities of taxation in the vibrant city of Cebu. We specialize in providing comprehensive tax tracking and compliance solutions for businesses and individuals alike. Stay informed with the latest updates on Cebu business taxes, income tax regulations, and financial management strategies. Our dedicated team is committed to ensuring your fiscal responsibility while offering expert advice and cutting-edge tools for effective tax management. Explore a seamless experience in tracking, reporting, and optimizing your financial landscape with Cebu Tax Tracker. Simplify your tax journey, thrive financially.">
+        <meta name="keywords" content="Cebu taxes, Tax tracking, Taxation in Cebu, Tax compliance, Financial tracking, Tax reporting, Cebu business taxes, Tax management, Accounting services, Tax updates, Philippine taxation, Income tax tracking, Business finance, Tax deadlines, Revenue tracking, Tax software, Finance management, Tax consulting, Tax advisory, Fiscal responsibility">
 		<meta name="author" content="Dinnoxitsolutions">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="{% static 'img/site-logo.png' %}" rel="icon" />
@@ -31,8 +31,8 @@
         <script src="{% static '/FunctionsJS/New_Business_Permit.js' %}"></script>
    </head>
    <body>
-   <form action="/" method="POST">
-    {% csrf_token %}
+    <!-- <form action="/" method="POST">
+    {% csrf_token %} -->
       <div class="wrapper">
          <div class="main">
             <section class="layout-form">
@@ -42,7 +42,8 @@
                             <div class="card mt-3">
                                 <h2 id="heading">NEW BUSINESS APPLICATION</h2>
                                 <p>Fill all form field to go to next step</p>
-                                <form id="msform">
+                                <form id="msform" action="/" method="POST">
+                                    {% csrf_token %}
                                     <ul id="progressbar">
                                         <li class="active" id="business_info">Business Information</li>
                                         <li id="tax_represent">Taxpayer or Authorized Representative Information</li>
@@ -480,6 +481,6 @@
          </div>
       </div>
       <script src="{% static 'js/business_permit_application.js' %}"></script>
-      </form>
+    <!-- </form> -->
    </body>
 </html>

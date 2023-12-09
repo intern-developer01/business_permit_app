@@ -78,18 +78,30 @@ WSGI_APPLICATION = 'BUSINESS_PERMIT_APP.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # John Khim Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bpa_db',
+#         'USER': 'root',
+#         'PASSWORD': 'yjh434ctuG@-@',
+#         'PORT': 3306,
+#         'HOST': '127.0.0.1',
+#         'CONN_MAX_AGE': 0
+#     }
+# }
+
+# John Khim Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bpa_db',
         'USER': 'root',
-        'PASSWORD': 'yjh434ctuG@-@',
+        'PASSWORD': 'Tatadota10',
         'PORT': 3306,
         'HOST': '127.0.0.1',
         'CONN_MAX_AGE': 0
     }
 }
-
 
 
 # Password validation
