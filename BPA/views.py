@@ -23,4 +23,11 @@ class BusinessPermitApplication(View):
         return render(request, 'business_permit_application.html', context)
     
     def post(self,request):
-        return HttpResponseRedirect("/#success_set")
+        return HttpResponseRedirect("/success")
+
+class Success(View):
+
+    def get(self,request):
+        context = {}
+        return render(request, 'Success.html', context)
+      

@@ -31,8 +31,6 @@
         <script src="{% static '/FunctionsJS/New_Business_Permit.js' %}"></script>
    </head>
    <body>
-   <form action="/" method="POST">
-    {% csrf_token %}
       <div class="wrapper">
          <div class="main">
             <section class="layout-form">
@@ -42,7 +40,8 @@
                             <div class="card mt-3">
                                 <h2 id="heading">NEW BUSINESS APPLICATION</h2>
                                 <p>Fill all form field to go to next step</p>
-                                <form id="msform">
+                                <form id="msform" action="/" method="POST">
+                                   {% csrf_token %}
                                     <ul id="progressbar">
                                         <li class="active" id="business_info">Business Information</li>
                                         <li id="tax_represent">Taxpayer or Authorized Representative Information</li>
@@ -70,7 +69,7 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels" for="type_org">Type of Organization</label>
-                                                        <select name="type_org" id="type_org" class="business_fields">
+                                                        <select name="type_org" id="type_org" class="business_fields fields">
                                                         <option value="Sole Proprietor">SOLE PROPRIETOR</option>
                                                         <option value="Partnership">PARTNERSHIP</option>
                                                         <option value="Corporation">CORPORATION</option>
@@ -80,33 +79,33 @@
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">CTC No.</label> 
-                                                        <input type="text" name="ctc_no" placeholder="CTC No." class="business_fields"/>
+                                                        <input type="text" name="ctc_no" placeholder="CTC No." class="business_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">TIN</label> 
-                                                        <input type="number" name="tin" placeholder="TIN Number" class="business_fields"/>
+                                                        <input type="number" name="tin" placeholder="TIN Number" class="business_fields fields"/>
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">TIN</label> 
-                                                        <input type="text" name="tin" placeholder="TIN Number" class="business_fields"/>
+                                                        <input type="text" name="tin" placeholder="TIN Number" class="business_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Reg. No. (DTI/SEC/CDA)</label> 
-                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" class="business_fields"/>
+                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" class="business_fields fields"/>
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Reg. No. (DTI/SEC/CDA)</label> 
-                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" class="business_fields"/>
+                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" class="business_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Reg. Date (DTI/SEC/CDA)</label> 
-                                                        <input type="date" name="reg_date" placeholder="Reg. Date (DTI/SEC/CDA)" class="business_fields"/>
+                                                        <input type="date" name="reg_date" placeholder="Reg. Date (DTI/SEC/CDA)" class="business_fields fields"/>
                                                     </div>
                                                     <div class="col-col-50"></div>
                                                 </div> 
@@ -128,27 +127,27 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Last Name: *</label> 
-                                                        <input type="text" name="lname" placeholder="Last Name" class="taxpayer_fields"/> 
+                                                        <input type="text" name="lname" placeholder="Last Name" class="taxpayer_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Last Name: *</label> 
-                                                        <input type="text" name="lname" placeholder="Last Name" class="taxpayer_fields"/>
+                                                        <input type="text" name="lname" placeholder="Last Name" class="taxpayer_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">First Name: *</label> 
-                                                        <input type="text" name="fname" placeholder="First Name" class="taxpayer_fields"/> 
+                                                        <input type="text" name="fname" placeholder="First Name" class="taxpayer_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Middle Name*</label> 
-                                                        <input type="text" name="mname" placeholder="Middle Name" class="taxpayer_fields"/>
+                                                        <input type="text" name="mname" placeholder="Middle Name" class="taxpayer_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels" for="type_org">Type of Organization</label>
-                                                        <select name="type_org" id="type_org" class="taxpayer_fields">
+                                                        <select name="type_org" id="type_org" class="taxpayer_fields fields">
                                                         <option value="Sole Proprietor">SOLE PROPRIETOR</option>
                                                         <option value="Partnership">PARTNERSHIP</option>
                                                         <option value="Corporation">CORPORATION</option>
@@ -178,31 +177,31 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Complete Owners Address</label> 
-                                                        <input type="text" name="fname" placeholder="Owners Address" class="address_fields"/> 
+                                                        <input type="text" name="fname" placeholder="Owners Address" class="address_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Business Name</label> 
-                                                        <input type="text" name="mname" placeholder="Business Name" class="address_fields"/>
+                                                        <input type="text" name="mname" placeholder="Business Name" class="address_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Trade / Franchise Name / Name of Company</label> 
-                                                        <input type="text" name="fname" placeholder="Company" class="address_fields"/> 
+                                                        <input type="text" name="fname" placeholder="Company" class="address_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Name of President / Treasurer of Corporation (Last Name, First Name Middle Name)</label> 
-                                                        <input type="text" name="mname" placeholder="Full Name" class="address_fields"/>
+                                                        <input type="text" name="mname" placeholder="Full Name" class="address_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
-                                                        <label class="fieldlabels">Business Contact No.</label> 
-                                                        <input type="number" name="fname" placeholder="Business Contact No." class="address_fields"/> 
+                                                        <label class="fieldlabels">Business Contact No. <i id="phone_msg" style="color:red;"></i> </label> 
+                                                        <input type="text" name="fname" placeholder="Business Contact No." class="address_fields fields" id="contact_number"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels" for="barangay">Barangay</label>
-                                                        <select name="barangay" id="barangay" class="address_fields">
+                                                        <select name="barangay" id="barangay" class="address_fields fields">
                                                         <option value="">Please choose your barangay</option>
                                                         <option value="Adlaon">ADLAON</option>
                                                         <option value="Agsungot">AGSUNGOT</option>
@@ -290,17 +289,17 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Business Area (sq.m)</label> 
-                                                        <input type="text" name="fname" class="address_fields"/> 
+                                                        <input type="text" name="fname" class="address_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Area of Signboard (sq.m)</label> 
-                                                        <input type="text" name="mname" class="address_fields"/>
+                                                        <input type="text" name="mname" class="address_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels" for="type_org">Type of Signboard</label>
-                                                        <select name="type_org" id="type_org" class="address_fields">
+                                                        <select name="type_org" id="type_org" class="address_fields fields">
                                                         <option value="Sole Proprietor">NO SIGNBOARD</option>
                                                         <option value="Partnership">WITH LIGHT</option>
                                                         <option value="Corporation">WITHOUT LIGHT</option>
@@ -308,7 +307,7 @@
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Area of Signboard (sq.m)</label> 
-                                                        <input type="text" name="mname" class="address_fields"/>
+                                                        <input type="text" name="mname" class="address_fields fields"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,21 +329,21 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Manager</label> 
-                                                        <input type="number" name="fname" class="employees_fields"/> 
+                                                        <input type="number" name="fname" class="employees_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Supervisor</label> 
-                                                        <input type="number" name="mname" class="employees_fields"/>
+                                                        <input type="number" name="mname" class="employees_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Cashier</label> 
-                                                        <input type="number" name="fname" class="employees_fields"/> 
+                                                        <input type="number" name="fname" class="employees_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Rank and File</label> 
-                                                        <input type="number" name="mname" class="employees_fields"/>
+                                                        <input type="number" name="mname" class="employees_fields fields"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -366,21 +365,21 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Elevator</label> 
-                                                        <input type="number" name="fname" class="machinery_fields"/> 
+                                                        <input type="number" name="fname" class="machinery_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Escalator</label> 
-                                                        <input type="number" name="mname" class="machinery_fields"/>
+                                                        <input type="number" name="mname" class="machinery_fields fields"/>
                                                     </div>
                                                 </div> 
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Air conditioner</label> 
-                                                        <input type="number" name="fname" class="machinery_fields"/> 
+                                                        <input type="number" name="fname" class="machinery_fields fields"/> 
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">CCTVs</label> 
-                                                        <input type="number" name="mname"  class="machinery_fields"/>
+                                                        <input type="number" name="mname"  class="machinery_fields fields"/>
                                                     </div>
                                                 </div> 
                                             </div>
@@ -402,7 +401,7 @@
                                                 <div class="e-row">
                                                     <div class="col-col-100">
                                                         <label class="fieldlabels" for="type_org">Place of Business</label>
-                                                        <select name="type_org" id="type_org" class="business_place_fields">
+                                                        <select name="type_org" id="type_org" class="business_place_fields fields">
                                                         <option value="">Please Choose</option>
                                                         <option value="Owned">Owned</option>
                                                         <option value="Rented">Rented (If rented, please submit contract of lease)</option>
@@ -428,21 +427,21 @@
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Line of Business</label> 
-                                                        <input  type="text" name="mname" placeholder="Type Line of Business here and select..." class="establisment_fields"/>
+                                                        <input  type="text" name="mname" placeholder="Type Line of Business here and select..." class="establisment_fields fields"/>
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">No. of Unit</label> 
-                                                        <input  type="number" name="mname" class="establisment_fields"/>
+                                                        <input  type="number" name="mname" class="establisment_fields fields"/>
                                                     </div>
                                                 </div>
                                                 <div class="e-row">
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Capital</label> 
-                                                        <input  type="number" name="mname" class="establisment_fields"/>
+                                                        <input  type="number" name="mname" class="establisment_fields fields"/>
                                                     </div>
                                                     <div class="col-col-50">
                                                         <label class="fieldlabels">Current Year Gross Sales</label> 
-                                                        <input  type="number" name="mname" class="establisment_fields"/>
+                                                        <input  type="number" name="mname" class="establisment_fields fields"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -480,6 +479,5 @@
          </div>
       </div>
       <script src="{% static 'js/business_permit_application.js' %}"></script>
-      </form>
    </body>
 </html>
