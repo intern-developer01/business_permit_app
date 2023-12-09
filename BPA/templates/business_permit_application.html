@@ -1,0 +1,481 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Welcome to Cebu Tax Tracker, your trusted partner in navigating the complexities of taxation in the vibrant city of Cebu. We specialize in providing comprehensive tax tracking and compliance solutions for businesses and individuals alike. Stay informed with the latest updates on Cebu business taxes, income tax regulations, and financial management strategies. Our dedicated team is committed to ensuring your fiscal responsibility while offering expert advice and cutting-edge tools for effective tax management. Explore a seamless experience in tracking, reporting, and optimizing your financial landscape with Cebu Tax Tracker. Simplify your tax journey, thrive financially.">
+      <meta name="keywords" content="Cebu taxes, Tax tracking, Taxation in Cebu, Tax compliance, Financial tracking, Tax reporting, Cebu business taxes, Tax management, Accounting services, Tax updates, Philippine taxation, Income tax tracking, Business finance, Tax deadlines, Revenue tracking, Tax software, Finance management, Tax consulting, Tax advisory, Fiscal responsibility">
+		<meta name="author" content="Dinnoxitsolutions">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="{% static 'img/site-logo.png' %}" rel="icon" />
+		<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+		<title>Business PErmit Application</title>
+		<link href="{% static 'css/globals.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/business_permit_application.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+		<link href="{% static 'css/template.css' %}" rel="stylesheet" />
+      
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <!-- FontAwesome -->
+      <script src="https://kit.fontawesome.com/727537e6ef.js" crossorigin="anonymous"></script>
+
+
+      <!-- FONT FAMILY MONTSERRAT -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="main">
+            <section class="layout-form">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-11 col-sm-10 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
+                            <div class="card mt-3">
+                                <h2 id="heading">NEW BUSINESS APPLICATION</h2>
+                                <p>Fill all form field to go to next step</p>
+                                <form id="msform">
+                                    <ul id="progressbar">
+                                        <li class="active" id="business_info">Business Information</li>
+                                        <li id="tax_represent">Taxpayer or Authorized Representative Information</li>
+                                        <li id="add_info">Address Information</li>
+                                        <li id="employee_info">Employee Information</li>
+                                        <li id="machine_info">Machinery Information</li>
+                                        <li id="place_business">Place of Business</li>
+                                        <li id="add_act">Additional Activities</li>
+                                        <li id="agreement">Agreement</li> 
+                                    </ul>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> <br> <br>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Business Information</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 1 - 4</h2>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels" for="type_org">Type of Organization</label>
+                                                        <select name="type_org" id="type_org">
+                                                        <option value="Sole Proprietor">SOLE PROPRIETOR</option>
+                                                        <option value="Partnership">PARTNERSHIP</option>
+                                                        <option value="Corporation">CORPORATION</option>
+                                                        <option value="Cooperative">COOPERATIVE</option>
+                                                        <option value="Non Stock Non Profit">NON STOCK NON PROFIT</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">CTC No.</label> 
+                                                        <input type="text" name="ctc_no" placeholder="CTC No." />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">TIN</label> 
+                                                        <input type="number" name="tin" placeholder="TIN Number" />
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">TIN</label> 
+                                                        <input type="text" name="tin" placeholder="TIN Number" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Reg. No. (DTI/SEC/CDA)</label> 
+                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" />
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Reg. No. (DTI/SEC/CDA)</label> 
+                                                        <input type="text" name="reg_no" placeholder="Reg. No. (DTI/SEC/CDA)" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Reg. Date (DTI/SEC/CDA)</label> 
+                                                        <input type="date" name="reg_date" placeholder="Reg. Date (DTI/SEC/CDA)" />
+                                                    </div>
+                                                    <div class="col-col-50"></div>
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Taxpayer or Authorized Representative Information</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 2 - 4</h2>
+                                                </div>
+                                            </div>  
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Last Name: *</label> 
+                                                        <input type="text" name="lname" placeholder="Last Name" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Last Name: *</label> 
+                                                        <input type="text" name="lname" placeholder="Last Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">First Name: *</label> 
+                                                        <input type="text" name="fname" placeholder="First Name" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Middle Name*</label> 
+                                                        <input type="text" name="mname" placeholder="Middle Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels" for="type_org">Type of Organization</label>
+                                                        <select name="type_org" id="type_org">
+                                                        <option value="Sole Proprietor">SOLE PROPRIETOR</option>
+                                                        <option value="Partnership">PARTNERSHIP</option>
+                                                        <option value="Corporation">CORPORATION</option>
+                                                        <option value="Cooperative">COOPERATIVE</option>
+                                                        <option value="Non Stock Non Profit">NON STOCK NON PROFIT</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Address Information</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 - 4</h2>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Complete Owners Address</label> 
+                                                        <input type="text" name="fname" placeholder="Owners Address" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Business Name</label> 
+                                                        <input type="text" name="mname" placeholder="Business Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Trade / Franchise Name / Name of Company</label> 
+                                                        <input type="text" name="fname" placeholder="Company" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Name of President / Treasurer of Corporation (Last Name, First Name Middle Name)</label> 
+                                                        <input type="text" name="mname" placeholder="Full Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Business Contact No.</label> 
+                                                        <input type="number" name="fname" placeholder="Business Contact No." /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels" for="barangay">Barangay</label>
+                                                        <select name="barangay" id="barangay">
+                                                        <option value="">Please choose your barangay</option>
+                                                        <option value="Adlaon">ADLAON</option>
+                                                        <option value="Agsungot">AGSUNGOT</option>
+                                                        <option value="Apas">APAS</option>
+                                                        <option value="Babag">BABAG</option>
+                                                        <option value="Bacayan">BACAYAN</option>
+                                                        <option value="Banilad">BANILAD</option>
+                                                        <option value="Basak Pardo">BASAK PARDO</option>
+                                                        <option value="Basak San Nicolas">BASAK SAN NICOLAS</option>
+                                                        <option value="Binaliw">BINALIW</option>
+                                                        <option value="Bonbon">BONBON</option>
+                                                        <option value="Budlaan">BUDLAAN</option>
+                                                        <option value="Buhisan">BUHISAN</option>
+                                                        <option value="Bulacao">BULACAO</option>
+                                                        <option value="Buot">BUOT</option>
+                                                        <option value="Busay">BUSAY</option>
+                                                        <option value="Calamba">CALAMBA</option>
+                                                        <option value="Cambinocot">CAMBINOCOT</option>
+                                                        <option value="Capitol Site">CAPITOL SITE</option>
+                                                        <option value="Carreta">CARRETA</option>
+                                                        <option value="Cogon Pardo">COGON PARDO</option>
+                                                        <option value="Cogon Ramos">COGON RAMOS</option>
+                                                        <option value="Day‑as">DAY-AS</option>
+                                                        <option value="Duljo Fatima">DULJO FATIMA</option>                                
+                                                        <option value="Ermita">ERMITA</option>                                          
+                                                        <option value="Guadalupe">GUADALUPE</option>
+                                                        <option value="Guba">GUBA</option>                                            
+                                                        <option value="Hipodromo">HIPODROMO</option>                                            
+                                                        <option value="Inayawan">INAYAWAN</option>    
+                                                        <option value="Kalubihan">KALUBIHAN</option>
+                                                        <option value="Kalunasan">KALUNASAN</option>
+                                                        <option value="Kamagayan">KAMAGAYAN</option>
+                                                        <option value="Kamputhaw">KAMPUTHAW</option>
+                                                        <option value="Kasambagan">KASAMBAGAN</option>
+                                                        <option value="Kinasang‑an Pardo">KINASANG-AN PARDO</option>
+                                                        <option value="Labangon">LABANGON</option>
+                                                        <option value="Lahug">LAHUG</option>
+                                                        <option value="Lorega San Miguel">LOREGA SAN MIGUEL</option>
+                                                        <option value="Lusaran">LUSARAN</option>
+                                                        <option value="Luz">LUZ</option>
+                                                        <option value="Mabini">MABINI</option>
+                                                        <option value="Mabolo">MABOLO</option>
+                                                        <option value="Malubog">MALUBOG</option>
+                                                        <option value="Mambaling">MAMBALING</option>
+                                                        <option value="Pahina Central">PAHINA CENTRAL</option>
+                                                        <option value="Pahina San Nicolas">PAHINA SAN NICOLAS</option>
+                                                        <option value="Pamutan">PAMUTAN</option>
+                                                        <option value="Pari-an">PARIAN</option>
+                                                        <option value="Paril">PARIL</option>
+                                                        <option value="Pasil">PASIL</option>
+                                                        <option value="Pit-os">PIT-OS</option>
+                                                        <option value="Poblacion Pardo">POBLACION PARDO</option>
+                                                        <option value="Pulangbato">PULANGBATO</option>
+                                                        <option value="Pung-ol Sibugay">PUNG-OL SIBUGAY</option>
+                                                        <option value="Punta Princesa">PUNTA PRINCESA</option>
+                                                        <option value="Quiot Pardo">QUIOT PARDO</option>
+                                                        <option value="Sambag I">SAMBAG I</option>
+                                                        <option value="Sambag II">SAMBAG II</option>
+                                                        <option value="San Antonio">SAN ANTONIO</option>
+                                                        <option value="San Jose">SAN JOSE</option>
+                                                        <option value="San Nicolas Proper	">SAN NICOLAS PROPER</option>
+                                                        <option value="San Roque">SAN ROQUE</option>
+                                                        <option value="Santa Cruz">SAN CRUZ</option>
+                                                        <option value="Santo Niño (Poblacion)">SANTO NIÑO (POBLACION)</option>
+                                                        <option value="Sapangdaku">SAPANGDAKU</option>
+                                                        <option value="Sawang Calero">SAWANG CALERO</option>
+                                                        <option value="Sinsin">SINSIN</option>
+                                                        <option value="Sirao">SIRAO</option>
+                                                        <option value="Suba">SUBA</option>
+                                                        <option value="Sudlon I">SUDLON I</option>
+                                                        <option value="Sudlon II">SUDLON II</option>
+                                                        <option value="T. Padilla">T. PADILLA</option>
+                                                        <option value="Tabunan">TABUNAN</option>
+                                                        <option value="Tagba-o">TAGBA-O</option>
+                                                        <option value="Talamban">TALAMBAN</option>
+                                                        <option value="Taptap">TAPTAP</option>
+                                                        <option value="Tejero (Villa Gonzalo)">TEJERO(VILLA GONZALO)</option>
+                                                        <option value="Tinago">TINAGO</option>
+                                                        <option value="Tisa">TISA</option>
+                                                        <option value="To-ong">TO-ONG</option>
+                                                        <option value="Zapatera">ZAPATERA</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Business Area (sq.m)</label> 
+                                                        <input type="text" name="fname"/> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Area of Signboard (sq.m)</label> 
+                                                        <input type="text" name="mname"/>
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels" for="type_org">Type of Signboard</label>
+                                                        <select name="type_org" id="type_org">
+                                                        <option value="Sole Proprietor">NO SIGNBOARD</option>
+                                                        <option value="Partnership">WITH LIGHT</option>
+                                                        <option value="Corporation">WITHOUT LIGHT</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Area of Signboard (sq.m)</label> 
+                                                        <input type="text" name="mname"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">No. of Employees</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 - 4</h2>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Manager</label> 
+                                                        <input type="number" name="fname" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Supervisor</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Cashier</label> 
+                                                        <input type="number" name="fname" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Rank and File</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">No. of Machineries</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 - 4</h2>
+                                                </div>
+                                            </div> <label class="fieldlabels">Upload Your Photo:</label> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Elevator</label> 
+                                                        <input type="number" name="fname" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Escalator</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div> 
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Air conditioner</label> 
+                                                        <input type="number" name="fname" /> 
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">CCTVs</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Place of Business</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 - 4</h2>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-100">
+                                                        <label class="fieldlabels" for="type_org">Place of Business</label>
+                                                        <select name="type_org" id="type_org">
+                                                        <option value="">Please Choose</option>
+                                                        <option value="Owned">Owned</option>
+                                                        <option value="Rented">Rented (If rented, please submit contract of lease)</option>
+                                                        </select> 
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Add Activities this Business Establishment is Engaged Into...</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 - 4</h2>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-4">
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Line of Business</label> 
+                                                        <input type="text" name="mname" placeholder="Type Line of Business here and select..." />
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">No. of Unit</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div>
+                                                <div class="e-row">
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Capital</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                    <div class="col-col-50">
+                                                        <label class="fieldlabels">Current Year Gross Sales</label> 
+                                                        <input type="number" name="mname" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="fs-title">Finish:</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 4 - 4</h2>
+                                                </div>
+                                            </div> <br><br>
+                                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                            <div class="row justify-content-center">
+                                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                                            </div> <br><br>
+                                            <div class="row justify-content-center">
+                                                <div class="col-7 text-center">
+                                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>           
+         </div>
+      </div>
+      <script src="{% static 'js/business_permit_application.js' %}"></script>
+   </body>
+</html>

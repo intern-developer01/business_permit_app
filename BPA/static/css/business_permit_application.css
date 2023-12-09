@@ -1,0 +1,237 @@
+.layout-form {
+    padding: 55px;
+}
+.layout-form #heading {
+    text-transform: uppercase;
+    color: #323232;
+    font-weight: normal
+}
+
+.layout-form #msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+.layout-form #msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    position: relative
+}
+
+.layout-form .form-card {
+    text-align: left
+}
+
+.layout-form #msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+.layout-form #msform input,
+.layout-form #msform textarea,
+.layout-form #msform select {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+.layout-form #msform input:focus,
+.layout-form #msform textarea:focus,
+.layout-form #msform select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #673AB7;
+    outline-width: 0
+}
+
+.layout-form #msform .action-button {
+    width: 100px;
+    background: #323232;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 9px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+/* .layout-form #msform .action-button:hover,
+.layout-form #msform .action-button:focus {
+    background-color: #311B92
+} */
+
+.layout-form #msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+.layout-form #msform .action-button-previous:hover,
+.layout-form #msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.layout-form .card {
+    z-index: 0;
+    border: none;
+    position: relative;
+    padding: 35px 45px;
+}
+
+.layout-form .fs-title {
+    font-size: 25px;
+    color: #323232;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.layout-form .purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.layout-form .steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.layout-form .fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+.layout-form #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+.layout-form #progressbar .active {
+    color: #323232;
+    font-weight: bold;
+}
+
+.layout-form #progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 12%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+.layout-form #progressbar #business_info:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f13e"
+}
+
+.layout-form #progressbar #type_org:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f007"
+}
+
+.layout-form #progressbar #tax_represent:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f030"
+}
+
+.layout-form #progressbar #add_info:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+
+.layout-form #progressbar #employee_info:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+.layout-form #progressbar #machine_info:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+.layout-form #progressbar #place_business:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+.layout-form #progressbar #add_act:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+.layout-form #progressbar #agreement:before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f00c"
+}
+.layout-form #progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+.layout-form #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+.layout-form #progressbar li.active:before,
+.layout-form #progressbar li.active:after {
+    background: #F2EA41;
+    color: #323232; 
+}
+
+.layout-form .progress {
+    height: 10px
+}
+
+.layout-form .progress-bar {
+    background-color: #323232
+}
+
+.layout-form .fit-image {
+    width: 100%;
+    object-fit: cover
+}
+.layout-form ul li {
+    color: #323232;
+}
+.layout-form .e-row {
+    gap: 65px;;
+}
