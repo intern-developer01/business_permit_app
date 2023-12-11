@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Welcome to Cebu Tax Tracker, your trusted partner in navigating the complexities of taxation in the vibrant city of Cebu. We specialize in providing comprehensive tax tracking and compliance solutions for businesses and individuals alike. Stay informed with the latest updates on Cebu business taxes, income tax regulations, and financial management strategies. Our dedicated team is committed to ensuring your fiscal responsibility while offering expert advice and cutting-edge tools for effective tax management. Explore a seamless experience in tracking, reporting, and optimizing your financial landscape with Cebu Tax Tracker. Simplify your tax journey, thrive financially.">
+        <meta name="keywords" content="Cebu taxes, Tax tracking, Taxation in Cebu, Tax compliance, Financial tracking, Tax reporting, Cebu business taxes, Tax management, Accounting services, Tax updates, Philippine taxation, Income tax tracking, Business finance, Tax deadlines, Revenue tracking, Tax software, Finance management, Tax consulting, Tax advisory, Fiscal responsibility">
+		<meta name="author" content="Dinnoxitsolutions">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="{% static 'img/site-logo.png' %}" rel="icon" />
+		<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+		<title>Business PErmit Application</title>
+		<link href="{% static 'css/globals.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/business_permit_application.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+		<link href="{% static 'css/template.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/landing.css' %}" rel="stylesheet" />
+      
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/727537e6ef.js" crossorigin="anonymous"></script>
+
+
+        <!-- FONT FAMILY INTER -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+    <section class="section-layout-landing">
+        <div class="e-container">
+            <div class="card">
+                <div class="head-card">
+                    <img src="{% static 'img/site-logo-lg.png' %}" alt="Cebu City Tax Tracker Logo">
+                    <div class="right-content">
+                        <h3 class="mb-0">Republic of the Philippines</h3>
+                        <h3>City of Cebu</h3>
+                        <p class="mb-0">Management Information and Computer Services </p>
+                        <p class="mb-0"><i>Government Information System</i></p>
+                    </div>
+                </div>
+                <div class="body-card">
+                    <div class="body-card-head mb-6">
+                        <h1 class="mb-0">BUSINESS</h1>
+                        <h2 class="mb-0">ONLINE PERMIT APPLICATION</h2>
+                    </div>
+                    <p class="fs-22 mb-4">Please choose the transaction you want.</p>
+                    <div class="button-holder">
+                        <div class="e-row mb-4">
+                            <div class="col-col-25">
+                                <a class="bg-button new" href="/business-permit">
+                                    <div class="button text-center">
+                                        <span class="text-white">New Business Application</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-col-25">
+                                <div class="button text-center renew">
+                                    <a class="bg-button" href="">Renew Business Permit</a>
+                                </div>
+                            </div>
+                            <div class="col-col-25"> 
+                                <div class="button text-center issuance">
+                                    <a class="bg-button" href="">Issuance of Business Permit</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>   
+                    <div class="button-holder permit" style="display: none;">
+                        <div class="e-row">
+                            <div class="col-col-50">
+                                <input type="text" name="ctc_no" placeholder="Please enter your business number here..." class="business_fields e-button w-100"/>
+                            </div>
+                            <div class="col-col-20">
+                                <div class="button text-center">
+                                    <a href="">Verify Permit No.</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>  
+                </div>
+                <div class="footer-card">
+                    <div class="social-holder">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Get a reference to the "Renew Business Permit" button
+        var renewButton = document.querySelector('.renew a');
+        var issuanceButton = document.querySelector('.issuance a');
+
+        // Get a reference to the "permit" container
+        var permitContainer = document.querySelector('.button-holder.permit');
+
+        // Add a click event listener to the renewButton
+        renewButton.addEventListener('click', function(event) {
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            // Set the display property of the permitContainer to 'block'
+            permitContainer.style.display = 'block';
+        });
+
+        // Add a click event listener to the issuanceButton
+        issuanceButton.addEventListener('click', function(event) {
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            // Set the display property of the permitContainer to 'block'
+            permitContainer.style.display = 'block';
+        });
+    </script>
+   </body>
+</html>
