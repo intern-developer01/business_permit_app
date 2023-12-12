@@ -1,0 +1,88 @@
+.section-layout-landing {
+    background-image: url("../img/landing-bg.png");
+    background-color: #11251A;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.section-layout-landing h1 {
+    color: #161616;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+.section-layout-landing h2 {
+    color: #0ACF97;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.58px;
+    position: relative;
+    display: inline-block;
+}
+.section-layout-landing h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #0ACF97;
+    width: 50%;
+    height: calc(100vw * 3/1900);
+    bottom: calc(-1 * (100vw * 10/1900));
+}
+.section-layout-landing .card {
+    padding: 45px;
+    margin-bottom: 0;
+    border-radius: 16px;
+    background: #F5F5F5;
+    box-shadow: 0px 0px 25px 0px rgba(48, 105, 75, 0.15);
+    background-image: url("../img/card-bg.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.section-layout-landing .body-card {
+    padding: 40px 40px 0;
+}
+.section-layout-landing .head-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.section-layout-landing img {
+    width: 125px;
+}
+.section-layout-landing .button {
+    padding: 15px 25px;
+    background: linear-gradient(178deg, #00AA7A 1.46%, #30694B 147.94%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.section-layout-landing .e-button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: #E6E6E6;
+    box-shadow: 0px 0px 20px 0px rgba(10, 207, 151, 0.10);
+}
+.section-layout-landing .e-button:focus {
+    border: 1px solid #00AA7A!important;
+}
+.section-layout-landing .e-button:focus-visible{
+    border: 1px solid transparent;
+    outline: transparent;
+}
+.section-layout-landing .e-button a {
+    color:  #323232;
+}
+.section-layout-landing .button a {
+    color: #fff;
+}
+.section-layout-landing .button-holder .e-row {
+    gap: 25px;
+}

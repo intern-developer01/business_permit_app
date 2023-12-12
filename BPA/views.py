@@ -31,3 +31,8 @@ class Success(View):
         context = {}
         return render(request, 'Success.html', context)
       
+        return HttpResponseRedirect("/#success_set")
+
+def LandingPage(request):
+    context = {}
+    return render(request, 'landing-page.html', context)

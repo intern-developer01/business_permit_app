@@ -12,6 +12,11 @@ li .sidebar-link{
 .card{
 	border: 0 !important;
 }
+.e-container {
+	max-width: 1296px;
+    margin: 0 auto;
+    width: 100%;
+}
 
 .navbar{
     z-index: 1;
@@ -35,8 +40,14 @@ li .sidebar-link{
     position: relative;
     z-index: -1;
 }
+.fs-22 {
+	font-size: 22px;
+}
+a {
+	text-decoration: none!important;
+}
 h1,h2,h3,h4,h5,h6,p,a, ::placeholder, th, button, label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif!important;
 }
 .text-left {
     text-align: left;
